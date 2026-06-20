@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Signature Verification</title>
+</head>
+<body style="text-align:center; font-family:Arial">
+
+<h2>AI Signature Forgery Detection (Live Demo)</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="signature" required>
+    <br><br>
+    <button type="submit">Verify Signature</button>
+</form>
+
+{% if result %}
+    <h3>{{ result }}</h3>
+    <p>Confidence Score: {{ confidence }}</p>
+{% endif %}
+
+</body>
+</html>
